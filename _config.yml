@@ -9,14 +9,14 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Junteng Liu"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+name                     : &name "Junteng Liu"
+description              : &description "Junteng Liu's academic homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://didi290410-ci.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+baseurl                  : "/LJT-Homepage" # the subpath of your site, e.g. "/blog"
+repository               : "didi290410-ci/LJT-Homepage"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,24 +24,24 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Junteng Liu"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "First-year PhD candidate at HKUST NLP Group. Research focuses on natural language processing and machine learning."
+  location         : "Hong Kong" 
+  employer         : "Hong Kong University of Science and Technology"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "jliugi@connect.ust.hk" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,13 +51,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "Vicent0205"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -74,7 +74,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "junteng88716710" # Username for X / Twitter
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
@@ -302,24 +302,24 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins
+# Plugins (previously gems:)
 plugins:
-  - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
+# mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
   - jekyll-redirect-from
   - jemoji
 
@@ -332,8 +332,8 @@ whitelist:
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
@@ -345,9 +345,7 @@ tag_archive:
 #   enabled:
 #     - categories
 #     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
+#   layout: archive
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
@@ -357,5 +355,213 @@ tag_archive:
 # - https://jch.penibelst.de/
 compress_html:
   clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+
+
+# prose.io config
+prose:
+  rooturl: ''
+  media: 'assets/images'
   ignore:
-    envs: development
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - /_includes/
+    - /_layouts/
+    - /_sass/
+    - /assets/
+  # metadata to display on prose editor
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          placeholder: "yyyy-mm-dd"
+      - name: "header"
+        field:
+          element: "object"
+          fields:
+            - name: "teaser"
+              field:
+                element: "text"
+                label: "Teaser image"
+                placeholder: " teaser image path"
+            - name: "overlay_color"
+              field:
+                element: "text"
+                label: "Overlay color"
+                placeholder: " color name or hex code"
+            - name: "overlay_filter"
+              field:
+                element: "text"
+                label: "Overlay filter"
+                placeholder: "0.5"
+    _pages:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Page title"
+          placeholder: "Title"
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          placeholder: "/404/"
+    _publications:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Publication title"
+          placeholder: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Publication date"
+          placeholder: "yyyy-mm-dd"
+      - name: "venue"
+        field:
+          element: "text"
+          label: "Venue"
+          placeholder: "Venue"
+      - name: "paperurl"
+        field:
+          element: "text"
+          label: "Paper URL"
+          placeholder: "URL"
+      - name: "author_profile"
+        field:
+          element: "hidden"
+          value: true
+    _talks:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Talk title"
+          placeholder: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Talk date"
+          placeholder: "yyyy-mm-dd"
+      - name: "venue"
+        field:
+          element: "text"
+          label: "Venue"
+          placeholder: "Venue"
+      - name: "paperurl"
+        field:
+          element: "text"
+          label: "Paper URL"
+          placeholder: "URL"
+      - name: "author_profile"
+        field:
+          element: "hidden"
+          value: true
+    _teaching:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Course title"
+          placeholder: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Course date"
+          placeholder: "yyyy-mm-dd"
+      - name: "venue"
+        field:
+          element: "text"
+          label: "Venue"
+          placeholder: "Venue"
+      - name: "paperurl"
+        field:
+          element: "text"
+          label: "Paper URL"
+          placeholder: "URL"
+      - name: "author_profile"
+        field:
+          element: "hidden"
+          value: true
+    _portfolio:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Project title"
+          placeholder: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Project date"
+          placeholder: "yyyy-mm-dd"
+      - name: "venue"
+        field:
+          element: "text"
+          label: "Venue"
+          placeholder: "Venue"
+      - name: "paperurl"
+        field:
+          element: "text"
+          label: "Paper URL"
+          placeholder: "URL"
+      - name: "author_profile"
+        field:
+          element: "hidden"
+          value: true
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default exclude" list.
+#
+# The items listed here have been specified because they are common to
+# many types of Jekyll sites and are not typically needed in the processed
+# site.
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
